@@ -23,6 +23,7 @@ public class LoginStepDefinition {
 
     @When("the user enters valid credentials and clicks on signin button")
     public void the_user_enters_valid_credentials_and_clicks_on_signin_button() {
+
         loginPage.Login();
 
     }

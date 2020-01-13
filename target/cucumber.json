@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2020-01-10T23:54:50.673Z",
+        "start_timestamp": "2020-01-13T05:28:26.951Z",
         "before": [
           {
             "result": {
-              "duration": 10914130300,
+              "duration": 10765089900,
               "status": "passed"
             },
             "match": {
@@ -16,13 +16,13 @@
           }
         ],
         "line": 5,
-        "name": "Account summary page should have the title Zero - Account Summary.",
+        "name": "Add\ta\tnew\tpayee",
         "description": "",
-        "id": "account-summary;account-summary-page-should-have-the-title-zero---account-summary.",
+        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
         "after": [
           {
             "result": {
-              "duration": 2622572800,
+              "duration": 2725037400,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 468856500,
+              "duration": 606611800,
               "status": "passed"
             },
             "line": 6,
@@ -47,41 +47,88 @@
           },
           {
             "result": {
-              "duration": 9998200,
+              "duration": 443186200,
               "status": "passed"
             },
             "line": 7,
-            "name": "the page title should be \"Zero - Account Summary\"",
+            "name": "the user is on  Add New Payee tab",
+            "match": {
+              "location": "AddNewPayeeStepDefs.the_user_is_on_Add_New_Payee_tab()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 619520200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "creates\tnew\tpayee\tusing following\tinformation",
+            "match": {
+              "location": "AddNewPayeeStepDefs.creates_new_payee_using_following_information(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Payee\tName",
+                  "The\tLaw\tOffices\tof\tHyde,\tPrice\t\u0026\tScharks"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee\tAddress",
+                  "100\tSame\tst,\tAnytown,\tUSA,\t10001"
+                ]
+              },
+              {
+                "cells": [
+                  "Account",
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Payee\tdetails",
+                  "XYZ\taccount"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 133059700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "message\t\"The new payee The100 was successfully created.\"\tshould\tbe\tdisplayed",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Zero - Account Summary\"",
-                  "offset": 25
+                  "val": "\"The new payee The100 was successfully created.\"",
+                  "offset": 8
                 }
               ],
-              "location": "LoginStepDefinition.the_page_title_should_be(String)"
+              "location": "AddNewPayeeStepDefs.message_should_be_displayed(String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@account_summary"
-          },
-          {
-            "name": "@acct_summary_page_title"
+            "name": "@add_new_payee"
           }
         ]
       }
     ],
-    "name": "Account Summary",
+    "name": "Add\tnew\tpayee\tunder\tpay\tbills",
     "description": "",
-    "id": "account-summary",
+    "id": "add-new-payee-under-pay-bills",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AccountSummary.feature",
+    "uri": "file:src/test/resources/features/AddNewPayee.feature",
     "tags": [
       {
-        "name": "@account_summary",
+        "name": "@add_new_payee",
         "type": "Tag",
         "location": {
           "line": 1,
