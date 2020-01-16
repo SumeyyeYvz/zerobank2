@@ -1,13 +1,13 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-13T05:28:26.951Z",
+        "start_timestamp": "2020-01-16T02:34:54.768Z",
         "before": [
           {
             "result": {
-              "duration": 10765089900,
+              "duration": 10310649200,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "Add\ta\tnew\tpayee",
+        "line": 3,
+        "name": "User should be able to transfer money successfully",
         "description": "",
-        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
+        "id": "transfer-money;user-should-be-able-to-transfer-money-successfully",
         "after": [
           {
             "result": {
-              "duration": 2725037400,
+              "duration": 2636711400,
               "status": "passed"
             },
             "match": {
@@ -35,100 +35,86 @@
         "steps": [
           {
             "result": {
-              "duration": 606611800,
+              "duration": 431878300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is on Account Summary page",
+            "match": {
+              "location": "TransferMoneyStepDefs.theUserIsOnAccountSummaryPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 189894700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user clicks on Transfer Money",
+            "match": {
+              "location": "TransferMoneyStepDefs.the_user_clicks_on_Transfer_Money()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 421213200,
               "status": "passed"
             },
             "line": 6,
-            "name": "the user is logged in",
+            "name": "the user enters valid transfer information and the user clicks on continue",
             "match": {
-              "location": "AccountSummaryStepDefs.the_user_is_logged_in()"
+              "location": "TransferMoneyStepDefs.the_user_enters_valid_transfer_information_and_the_user_clicks_on_continue()"
             },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 443186200,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the user is on  Add New Payee tab",
-            "match": {
-              "location": "AddNewPayeeStepDefs.the_user_is_on_Add_New_Payee_tab()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 619520200,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "creates\tnew\tpayee\tusing following\tinformation",
-            "match": {
-              "location": "AddNewPayeeStepDefs.creates_new_payee_using_following_information(String,String\u003e)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Payee\tName",
-                  "The\tLaw\tOffices\tof\tHyde,\tPrice\t\u0026\tScharks"
-                ]
-              },
-              {
-                "cells": [
-                  "Payee\tAddress",
-                  "100\tSame\tst,\tAnytown,\tUSA,\t10001"
-                ]
-              },
-              {
-                "cells": [
-                  "Account",
-                  "Checking"
-                ]
-              },
-              {
-                "cells": [
-                  "Payee\tdetails",
-                  "XYZ\taccount"
-                ]
-              }
-            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 133059700,
+              "duration": 93104300,
               "status": "passed"
             },
-            "line": 13,
-            "name": "message\t\"The new payee The100 was successfully created.\"\tshould\tbe\tdisplayed",
+            "line": 7,
+            "name": "the user clicks on submit button",
+            "match": {
+              "location": "TransferMoneyStepDefs.the_user_clicks_on_submit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27147400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user should see \"You successfully submitted your transaction.\" message",
             "match": {
               "arguments": [
                 {
-                  "val": "\"The new payee The100 was successfully created.\"",
-                  "offset": 8
+                  "val": "\"You successfully submitted your transaction.\"",
+                  "offset": 20
                 }
               ],
-              "location": "AddNewPayeeStepDefs.message_should_be_displayed(String)"
+              "location": "TransferMoneyStepDefs.the_user_should_see_message(String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@add_new_payee"
+            "name": "@transfer_money"
           }
         ]
       }
     ],
-    "name": "Add\tnew\tpayee\tunder\tpay\tbills",
+    "name": "Transfer Money",
     "description": "",
-    "id": "add-new-payee-under-pay-bills",
+    "id": "transfer-money",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AddNewPayee.feature",
+    "uri": "file:src/test/resources/features/TransferMoney.feature",
     "tags": [
       {
-        "name": "@add_new_payee",
+        "name": "@transfer_money",
         "type": "Tag",
         "location": {
           "line": 1,

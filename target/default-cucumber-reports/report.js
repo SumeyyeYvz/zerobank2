@@ -1,21 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddNewPayee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/TransferMoney.feature");
 formatter.feature({
-  "name": "Add\tnew\tpayee\tunder\tpay\tbills",
+  "name": "Transfer Money",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@add_new_payee"
+      "name": "@transfer_money"
     }
   ]
 });
 formatter.scenario({
-  "name": "Add\ta\tnew\tpayee",
+  "name": "User should be able to transfer money successfully",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@add_new_payee"
+      "name": "@transfer_money"
     }
   ]
 });
@@ -23,67 +23,51 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user is logged in",
+  "name": "the user is on Account Summary page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "AccountSummaryStepDefs.the_user_is_logged_in()"
+  "location": "TransferMoneyStepDefs.theUserIsOnAccountSummaryPage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user is on  Add New Payee tab",
-  "keyword": "Given "
+  "name": "the user clicks on Transfer Money",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "AddNewPayeeStepDefs.the_user_is_on_Add_New_Payee_tab()"
+  "location": "TransferMoneyStepDefs.the_user_clicks_on_Transfer_Money()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "creates\tnew\tpayee\tusing following\tinformation",
-  "rows": [
-    {
-      "cells": [
-        "Payee\tName",
-        "The\tLaw\tOffices\tof\tHyde,\tPrice\t\u0026\tScharks"
-      ]
-    },
-    {
-      "cells": [
-        "Payee\tAddress",
-        "100\tSame\tst,\tAnytown,\tUSA,\t10001"
-      ]
-    },
-    {
-      "cells": [
-        "Account",
-        "Checking"
-      ]
-    },
-    {
-      "cells": [
-        "Payee\tdetails",
-        "XYZ\taccount"
-      ]
-    }
-  ],
+  "name": "the user enters valid transfer information and the user clicks on continue",
   "keyword": "And "
 });
 formatter.match({
-  "location": "AddNewPayeeStepDefs.creates_new_payee_using_following_information(String,String\u003e)"
+  "location": "TransferMoneyStepDefs.the_user_enters_valid_transfer_information_and_the_user_clicks_on_continue()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "message\t\"The new payee The100 was successfully created.\"\tshould\tbe\tdisplayed",
+  "name": "the user clicks on submit button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "TransferMoneyStepDefs.the_user_clicks_on_submit_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should see \"You successfully submitted your transaction.\" message",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AddNewPayeeStepDefs.message_should_be_displayed(String)"
+  "location": "TransferMoneyStepDefs.the_user_should_see_message(String)"
 });
 formatter.result({
   "status": "passed"

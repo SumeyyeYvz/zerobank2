@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class PayBillsPage extends BasePage{
+public class PayBillsPage extends BasePage {
     @FindBy(id = "sp_payee")
     public WebElement payeeDropdown;
 

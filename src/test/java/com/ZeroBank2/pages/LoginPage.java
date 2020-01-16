@@ -23,14 +23,7 @@ public void Login (){
     signinButton.click();
 
 }
-
-
-
-
-
-
-
-    public LoginPage(){
+ public LoginPage(){
         PageFactory.initElements(Driver.get(), this);
     }
 }

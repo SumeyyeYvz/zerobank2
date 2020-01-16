@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/ZeroBank2/step_definitions",
         dryRun = false,
-        tags="@add_new_payee"
+        tags="@transfer_money"
         )
 
 public class CukesRunner {
